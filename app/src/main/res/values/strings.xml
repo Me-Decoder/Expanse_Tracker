@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Expanse Tracker</string>
+    <string name="default_web_client_id">76909347951-96jgupl0teqlu29i2bcqt086d4mrmhur.apps.googleusercontent.com</string>
 </resources>

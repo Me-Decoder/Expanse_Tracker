@@ -8,7 +8,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
+
 class SplashScreen : AppCompatActivity() {
+
 
 
 
@@ -17,10 +21,23 @@ class SplashScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash_screen)
 
+
+
         // Optional delay
         Handler(Looper.getMainLooper()).postDelayed({
-        startActivity(Intent(this, LoginActivity::class.java))
-        finish()
+
+            if (Firebase.auth.currentUser != null) {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
+            else
+            {
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+
+
+
         }, 2000)
 
     }

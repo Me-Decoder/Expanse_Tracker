@@ -43,20 +43,21 @@ android {
 }
 
 dependencies {
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
     implementation (libs.material)   // latest stable version
 
     // Firebase Firestore
-    implementation ("com.google.firebase:firebase-firestore-ktx:25.1.4")
+    implementation (libs.firebase.firestore.ktx)
 
 // Firebase Auth (if you want login)
-    implementation ("com.google.firebase:firebase-auth-ktx:23.2.1")
+    implementation (libs.firebase.auth.ktx)
 
 // Material Design
     implementation (libs.material.v1110)
 
 // RecyclerView
-    implementation ("androidx.recyclerview:recyclerview:1.4.0")
+    implementation (libs.androidx.recyclerview)
 
 // Glide (for profile images later, optional)
     implementation ("com.github.bumptech.glide:glide:4.16.0")

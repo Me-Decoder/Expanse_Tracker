@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.expansetracker" />
-                  <option name="mobileSdkAppId" value="1:76909347951:android:c2765f698c51ce3516b99a" />
-                  <option name="projectId" value="expanse-tracker-fbdbe" />
-                  <option name="projectNumber" value="76909347951" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

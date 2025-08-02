@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "76909347951",
+    "project_id": "expanse-tracker-fbdbe",
+    "storage_bucket": "expanse-tracker-fbdbe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76909347951:android:c2765f698c51ce3516b99a",
+        "android_client_info": {
+          "package_name": "com.example.expansetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76909347951-geo0ilmdjjd5enjvug0jb71ibib21sdc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expansetracker",
+            "certificate_hash": "3544440c0e5ad4de2391acb0bb5a0cbf2ebf5ee6"
+          }
+        },
+        {
+          "client_id": "76909347951-96jgupl0teqlu29i2bcqt086d4mrmhur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSFVhdGef22N-8oI0JdiCceB6TEciKCHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76909347951-96jgupl0teqlu29i2bcqt086d4mrmhur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
