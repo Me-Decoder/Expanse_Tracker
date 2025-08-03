@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
             .setGoogleIdTokenRequestOptions(
                 BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
                     .setSupported(true)
-                    .setServerClientId(getString(R.string.default_web_client_id)) // ✅ add this in strings.xml from Firebase
+                    .setServerClientId(getString(R.string.default_web_client_id)) // add this in strings.xml from Firebase
                     .setFilterByAuthorizedAccounts(false)
                     .build()
             )
