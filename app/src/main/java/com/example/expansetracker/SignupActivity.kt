@@ -29,6 +29,8 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var signInRequest: BeginSignInRequest
 
 
+    private var progressBar: android.widget.ProgressBar? = null
+
 
     var txtName: EditText? = null
     var txtEmail: EditText? = null
@@ -52,6 +54,7 @@ class SignupActivity : AppCompatActivity() {
         btnSignUp = findViewById(R.id.btn_Signup)
         btnGoogleSignup = findViewById(R.id.btn_googleSignup)
 
+        progressBar = findViewById(R.id.progressBar)
 
         btnSignupClick()
         setupGoogleSignIn()
@@ -95,6 +98,10 @@ class SignupActivity : AppCompatActivity() {
                     txtCPassword?.requestFocus()
                 }
                 else -> {
+                    // Show loader
+                    progressBar?.visibility = android.view.View.VISIBLE
+                    btnSignUp?.isEnabled = false
+
                     auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
@@ -103,22 +110,26 @@ class SignupActivity : AppCompatActivity() {
                                 val user = hashMapOf(
                                     "uid" to userId,
                                     "name" to name,
-                                    "email" to email,
-                                    "password" to password
+                                    "email" to email
                                 )
 
                                 db.collection("users").document(email)
                                     .set(user)
                                     .addOnSuccessListener {
+                                        progressBar?.visibility = android.view.View.GONE
+                                        btnSignUp?.isEnabled = true
                                         showToast("Signup Successful 🎉")
-                                        // Navigate to another screen (e.g., login or dashboard)
                                         startActivity(Intent(this, LoginActivity::class.java))
                                         finish()
                                     }
                                     .addOnFailureListener { e ->
+                                        progressBar?.visibility = android.view.View.GONE
+                                        btnSignUp?.isEnabled = true
                                         showToast("User data save failed: ${e.localizedMessage}")
                                     }
                             } else {
+                                progressBar?.visibility = android.view.View.GONE
+                                btnSignUp?.isEnabled = true
                                 showToast("Signup Failed: ${task.exception?.localizedMessage}")
                             }
                         }
@@ -126,6 +137,7 @@ class SignupActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun setupGoogleSignIn() {
         oneTapClient = Identity.getSignInClient(this)
         signInRequest = BeginSignInRequest.builder()

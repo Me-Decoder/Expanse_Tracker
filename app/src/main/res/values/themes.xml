@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ExpanseTracker" parent="Theme.AppCompat.NoActionBar">
+    <style name="Base.Theme.ExpanseTracker" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.ExpanseTracker" parent="Base.Theme.ExpanseTracker" />
+
+    <style name="DatePickerLightOrange" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <!-- Header and calendar background -->
+        <item name="colorPrimary">@color/light_orange</item>
+        <item name="colorPrimaryVariant">@color/light_orange</item>
+        <item name="colorAccent">@color/light_orange</item>
+    </style>
 </resources>

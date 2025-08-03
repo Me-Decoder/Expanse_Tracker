@@ -15,6 +15,7 @@ class SplashScreen : AppCompatActivity() {
 
 
 
+    val auth = Firebase.auth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,20 +26,16 @@ class SplashScreen : AppCompatActivity() {
 
         // Optional delay
         Handler(Looper.getMainLooper()).postDelayed({
-
-            if (Firebase.auth.currentUser != null) {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
-            else
-            {
+            val currentUser = auth.currentUser
+            if (currentUser != null) {
+                // User already logged in (via Google or email)
+                startActivity(Intent(this, MainActivity::class.java)) // or HomeActivity
+            } else {
+                // No user is signed in
                 startActivity(Intent(this, LoginActivity::class.java))
-                finish()
             }
-
-
-
-        }, 2000)
+            finish()
+        }, 2000) // 2 second splash
 
     }
 

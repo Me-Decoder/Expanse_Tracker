@@ -7,7 +7,19 @@
     <color name="blue">#25AAB1</color>
     <color name="black">#1D1D1D</color>
     <color name="orange">#EF655D</color>
+    <color name="orange2">#EF655D</color>
     <color name="white">#F8F6F3</color>
+    <color name="lightGray">#D3D3D3</color>
+    <color name="light_orange">#F36960</color>
+
+
+    <color name="green">#00FF00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#F44336</color>
+    <color name="purple">#673AB7</color>
+    <color name="gray">#8F8F8F</color>
+
+
 
 
 </resources>
